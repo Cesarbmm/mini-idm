@@ -1,0 +1,8 @@
+host/idm1.fis.epn.ec
+host/idm2.fis.epn.ec
+host/edge.fis.epn.ec
+host/client.fis.epn.ec
+ldap/ldap1.fis.epn.ec
+ldap/ldap2.fis.epn.ec
+ldap/ldap.fis.epn.ec
+HTTP/web.fis.epn.ec
