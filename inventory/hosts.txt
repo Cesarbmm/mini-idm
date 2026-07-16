@@ -1,0 +1,6 @@
+ca 192.168.56.10 ca.fis.epn.ec
+idm1 192.168.56.11 idm1.fis.epn.ec
+idm2 192.168.56.12 idm2.fis.epn.ec
+edge 192.168.56.20 edge.fis.epn.ec
+client 192.168.56.30 client.fis.epn.ec
+

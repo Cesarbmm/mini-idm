@@ -1,0 +1,24 @@
+# Secretos
+*.key
+*.pem
+*.p12
+*.pfx
+*.keytab
+*.stash
+*.secret
+*.password
+
+# Bases y datos privados
+private/
+secrets/
+pki/ca/private/
+kerberos/database/
+
+#Resultsados temporales
+results/raw/*.tmp
+*.log
+
+#Sistema
+.DS_Store
+Thumbs.db
+
