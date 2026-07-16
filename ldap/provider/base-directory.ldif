@@ -1,0 +1,111 @@
+dn: ou=People,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+description: Usuarios de la FIS
+
+dn: ou=Groups,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+description: Grupos de la FIS
+
+dn: ou=Services,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: organizationalUnit
+ou: Services
+description: Cuentas de servicios internos
+
+dn: cn=estudiantes,ou=Groups,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: posixGroup
+cn: estudiantes
+gidNumber: 20000
+memberUid: czapata
+
+dn: cn=profesores,ou=Groups,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: posixGroup
+cn: profesores
+gidNumber: 20001
+memberUid: jperez
+memberUid: dnoboa
+
+dn: cn=empleados,ou=Groups,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: posixGroup
+cn: empleados
+gidNumber: 20002
+memberUid: malvan
+
+dn: uid=czapata,ou=People,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: czapata
+cn: Cesar Zapata
+sn: Zapata
+givenName: Cesar
+displayName: Cesar Zapata
+mail: czapata@fis.epn.ec
+uidNumber: 20000
+gidNumber: 20000
+homeDirectory: /home/czapata
+loginShell: /bin/bash
+gecos: Cesar Zapata
+userPassword: {CRYPT}x
+
+dn: uid=jperez,ou=People,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: jperez
+cn: Juan Perez
+sn: Perez
+givenName: Juan
+displayName: Juan Perez
+mail: jperez@fis.epn.ec
+uidNumber: 20001
+gidNumber: 20001
+homeDirectory: /home/jperez
+loginShell: /bin/bash
+gecos: Juan Perez
+userPassword: {CRYPT}x
+
+dn: uid=malvan,ou=People,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: malvan
+cn: Maria Alvan
+sn: Alvan
+givenName: Maria
+displayName: Maria Alvan
+mail: malvan@fis.epn.ec
+uidNumber: 20002
+gidNumber: 20002
+homeDirectory: /home/malvan
+loginShell: /bin/bash
+gecos: Maria Alvan
+userPassword: {CRYPT}x
+
+dn: uid=dnoboa,ou=People,dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: dnoboa
+cn: Diego Noboa
+sn: Noboa
+givenName: Diego
+displayName: Diego Noboa
+mail: dnoboa@fis.epn.ec
+uidNumber: 20003
+gidNumber: 20001
+homeDirectory: /home/dnoboa
+loginShell: /bin/bash
+gecos: Diego Noboa
+userPassword: {CRYPT}x

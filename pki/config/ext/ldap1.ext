@@ -1,0 +1,14 @@
+[ server_cert ]
+basicConstraints = critical, CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+keyUsage = critical, digitalSignature
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[ alt_names ]
+DNS.1 = ldap1.fis.epn.ec
+DNS.2 = idm1.fis.epn.ec
+DNS.3 = ldap.fis.epn.ec
+DNS.4 = ldap.fis.epn.edu.ec
+IP.1 = 192.168.56.11

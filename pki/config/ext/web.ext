@@ -1,0 +1,13 @@
+[ server_cert ]
+basicConstraints = critical, CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+keyUsage = critical, digitalSignature
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[ alt_names ]
+DNS.1 = web.fis.epn.ec
+DNS.2 = edge.fis.epn.ec
+DNS.3 = monitor.fis.epn.ec 
+IP.1 = 192.168.56.20
