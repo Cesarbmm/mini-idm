@@ -1,0 +1,5 @@
+Total: 120
+Exitosas: 120
+Fallidas: 0
+Disponibilidad: 100.00%
+Latencia media: 47.05 ms

@@ -1,0 +1,2 @@
+ldap1_directo,iteraciones=50,exitosas=50,tiempo_ms=1243,qps=40.23,latencia_media_ms=24.86
+haproxy,iteraciones=50,exitosas=50,tiempo_ms=1410,qps=35.46,latencia_media_ms=28.20
