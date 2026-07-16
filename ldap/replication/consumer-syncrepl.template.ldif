@@ -1,0 +1,7 @@
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncrepl
+olcSyncrepl: rid=001 provider=ldaps://ldap1.fis.epn.ec bindmethod=simple binddn="uid=ldap-replicator,ou=Services,dc=fis,dc=epn,dc=ec" credentials=<REPLICATION_PASSWORD> searchbase="dc=fis,dc=epn,dc=ec" scope=sub filter="(objectClass=*)" type=refreshAndPersist retry="5 5 30 +" network-timeout=10 timeout=10 schemachecking=on tls_cacert=/etc/ldap/tls/fis-root-ca.crt tls_reqcert=demand tls_reqsan=demand
+-
+add: olcUpdateRef
+olcUpdateRef: ldaps://ldap1.fis.epn.ec

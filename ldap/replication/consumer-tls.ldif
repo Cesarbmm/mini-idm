@@ -4,7 +4,7 @@ replace: olcTLSCACertificateFile
 olcTLSCACertificateFile: /etc/ldap/tls/fis-root-ca.crt
 -
 replace: olcTLSCertificateFile
-olcTLSCertificateFile: /etc/ldap/tls/ldap1.crt
+olcTLSCertificateFile: /etc/ldap/tls/ldap2.crt
 -
 replace: olcTLSCertificateKeyFile
-olcTLSCertificateKeyFile: /etc/ldap/tls/ldap1.key
+olcTLSCertificateKeyFile: /etc/ldap/tls/ldap2.key
