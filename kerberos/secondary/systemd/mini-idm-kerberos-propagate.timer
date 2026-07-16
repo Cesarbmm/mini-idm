@@ -1,0 +1,11 @@
+[Unit]
+Description=Propagacion periodica de la base Kerberos
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+AccuracySec=30s
+Unit=mini-idm-kerberos-propagate.service
+
+[Install]
+WantedBy=timers.target

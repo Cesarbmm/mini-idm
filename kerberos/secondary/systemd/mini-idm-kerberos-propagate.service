@@ -1,0 +1,10 @@
+[Unit]
+Description=Propagar la base Kerberos al KDC secundario
+After=network-online.target krb5-kdc.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+ExecStart=/usr/local/sbin/propagate-kerberos-db

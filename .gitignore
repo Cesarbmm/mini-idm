@@ -22,3 +22,11 @@ results/raw/*.tmp
 .DS_Store
 Thumbs.db
 
+
+# Kerberos KDC: secretos y bases
+kerberos/**/stash
+kerberos/**/principal
+kerberos/**/principal.*
+kerberos/**/replica_datatrans
+kerberos/**/replica_datatrans.*
+*.dump
