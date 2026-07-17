@@ -1,0 +1,6 @@
+dn: uid=web-reader,ou=Services,dc=fis,dc=epn,dc=ec
+objectClass: account
+objectClass: simpleSecurityObject
+uid: web-reader
+description: Cuenta de lectura del portal web FIS
+userPassword: <GENERAR_CON_SLAPPASSWD>

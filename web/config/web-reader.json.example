@@ -1,0 +1,9 @@
+{
+  "ldap_host": "ldap.fis.epn.edu.ec",
+  "ldap_port": 636,
+  "bind_dn": "uid=web-reader,ou=Services,dc=fis,dc=epn,dc=ec",
+  "password": "<NO_ALMACENAR_EN_GIT>",
+  "people_base": "ou=People,dc=fis,dc=epn,dc=ec",
+  "groups_base": "ou=Groups,dc=fis,dc=epn,dc=ec",
+  "ca_file": "/etc/ssl/certs/ca-certificates.crt"
+}

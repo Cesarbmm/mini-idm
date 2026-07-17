@@ -1,0 +1,16 @@
+=== KLIST ===
+Ticket cache: FILE:/tmp/krb5cc_1000
+Default principal: czapata@FIS.EPN.EC
+
+Valid starting       Expires              Service principal
+07/17/2026 01:41:26  07/17/2026 11:41:22  krbtgt/FIS.EPN.EC@FIS.EPN.EC
+	renew until 07/24/2026 01:41:22
+07/17/2026 01:41:31  07/17/2026 11:41:22  HTTP/web.fis.epn.ec@FIS.EPN.EC
+	renew until 07/24/2026 01:41:22
+
+=== HTTP STATUS ===
+HTTP 200
+
+=== CERTIFICADO ===
+subject=C = EC, ST = Pichincha, L = Quito, O = EPN, OU = FIS, CN = web.fis.epn.ec
+issuer=C = EC, ST = Pichincha, L = Quito, O = EPN, OU = FIS, CN = FIS Root CA

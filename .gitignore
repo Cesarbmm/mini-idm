@@ -30,3 +30,17 @@ kerberos/**/principal.*
 kerberos/**/replica_datatrans
 kerberos/**/replica_datatrans.*
 *.dump
+
+# Portal web: credenciales
+web/**/*.keytab
+web/**/web-reader.json
+web/**/web-reader.password
+web/**/*.key
+http-web.keytab
+
+# Portal web: credenciales
+web/**/*.keytab
+web/**/web-reader.json
+web/**/web-reader.password
+web/**/*.key
+http-web.keytab

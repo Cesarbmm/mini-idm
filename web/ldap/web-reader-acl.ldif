@@ -1,0 +1,9 @@
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcAccess
+olcAccess: {1}to dn.subtree="ou=People,dc=fis,dc=epn,dc=ec" attrs=entry,children,objectClass,uid,cn,sn,givenName,displayName,mail,uidNumber,gidNumber,homeDirectory,loginShell
+ by dn.exact="uid=web-reader,ou=Services,dc=fis,dc=epn,dc=ec" read
+ by * break
+olcAccess: {2}to dn.subtree="ou=Groups,dc=fis,dc=epn,dc=ec" attrs=entry,children,objectClass,cn,gidNumber,memberUid
+ by dn.exact="uid=web-reader,ou=Services,dc=fis,dc=epn,dc=ec" read
+ by * break
