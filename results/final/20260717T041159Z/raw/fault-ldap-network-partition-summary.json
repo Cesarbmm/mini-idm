@@ -1,0 +1,18 @@
+{
+  "source": "/home/client/mini-idm-final/fault-ldap-network-partition.csv",
+  "samples": 179,
+  "successes": 179,
+  "failures": 0,
+  "availability_percent": 100.0,
+  "latency_ms": {
+    "mean": 201.446,
+    "median": 187.081,
+    "p95": 221.335,
+    "maximum": 2160.151
+  },
+  "first_failure_timestamp_ms": null,
+  "first_recovery_timestamp_ms": null,
+  "observed_recovery_ms": null,
+  "longest_failure_streak": 0,
+  "interpretation": "sin_fallos_observados"
+}

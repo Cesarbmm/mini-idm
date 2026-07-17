@@ -1,0 +1,18 @@
+{
+  "source": "/home/labadmin/mini-idm/results/final/20260717T041159Z/raw/fault-kdc-primary.csv",
+  "samples": 55,
+  "successes": 55,
+  "failures": 0,
+  "availability_percent": 100.0,
+  "latency_ms": {
+    "mean": 168.022,
+    "median": 20.826,
+    "p95": 1026.439,
+    "maximum": 1030.064
+  },
+  "first_failure_timestamp_ms": null,
+  "first_recovery_timestamp_ms": null,
+  "observed_recovery_ms": null,
+  "longest_failure_streak": 0,
+  "interpretation": "sin_fallos_observados"
+}

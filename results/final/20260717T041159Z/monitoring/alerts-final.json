@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "__name__": "ALERTS",
+          "alertname": "LDAPEndpointUnavailable",
+          "alertstate": "firing",
+          "instance": "ldap1.fis.epn.ec:636",
+          "job": "blackbox-ldaps",
+          "severity": "critical"
+        },
+        "value": [
+          1784262360.736,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "ALERTS",
+          "alertname": "LDAPPrimaryDownFailoverActive",
+          "alertstate": "firing",
+          "instance": "ldap1.fis.epn.ec:636",
+          "job": "blackbox-ldaps",
+          "severity": "warning"
+        },
+        "value": [
+          1784262360.736,
+          "1"
+        ]
+      }
+    ]
+  }
+}

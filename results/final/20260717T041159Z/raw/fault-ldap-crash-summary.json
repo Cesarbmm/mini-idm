@@ -1,0 +1,18 @@
+{
+  "source": "/home/client/mini-idm-final/fault-ldap-crash.csv",
+  "samples": 107,
+  "successes": 107,
+  "failures": 0,
+  "availability_percent": 100.0,
+  "latency_ms": {
+    "mean": 208.738,
+    "median": 188.399,
+    "p95": 213.584,
+    "maximum": 2195.415
+  },
+  "first_failure_timestamp_ms": null,
+  "first_recovery_timestamp_ms": null,
+  "observed_recovery_ms": null,
+  "longest_failure_streak": 0,
+  "interpretation": "sin_fallos_observados"
+}

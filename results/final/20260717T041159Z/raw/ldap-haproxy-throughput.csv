@@ -1,0 +1,2 @@
+mode,target,total,parallel,successes,failures,elapsed_ms,throughput_per_second
+ldap,ldaps://ldap.fis.epn.edu.ec,300,10,300,0,4782.446,62.729

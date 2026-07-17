@@ -1,0 +1,352 @@
+{
+  "status": "success",
+  "data": {
+    "activeTargets": [
+      {
+        "discoveredLabels": {
+          "__address__": "127.0.0.1:9117",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "apache"
+        },
+        "labels": {
+          "instance": "127.0.0.1:9117",
+          "job": "apache"
+        },
+        "scrapePool": "apache",
+        "scrapeUrl": "http://127.0.0.1:9117/metrics",
+        "globalUrl": "http://edge.fis.epn.ec:9117/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:05.945758808Z",
+        "lastScrapeDuration": 0.003954002,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "127.0.0.1:9115",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-exporter"
+        },
+        "labels": {
+          "instance": "127.0.0.1:9115",
+          "job": "blackbox-exporter"
+        },
+        "scrapePool": "blackbox-exporter",
+        "scrapeUrl": "http://127.0.0.1:9115/metrics",
+        "globalUrl": "http://edge.fis.epn.ec:9115/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:03.571151112Z",
+        "lastScrapeDuration": 0.001734644,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "kdc1.fis.epn.ec:88",
+          "__metrics_path__": "/probe",
+          "__param_module": "tcp_connect",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-kdc"
+        },
+        "labels": {
+          "instance": "kdc1.fis.epn.ec:88",
+          "job": "blackbox-kdc"
+        },
+        "scrapePool": "blackbox-kdc",
+        "scrapeUrl": "http://127.0.0.1:9115/probe?module=tcp_connect&target=kdc1.fis.epn.ec%3A88",
+        "globalUrl": "http://edge.fis.epn.ec:9115/probe?module=tcp_connect&target=kdc1.fis.epn.ec%3A88",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:59.543811554Z",
+        "lastScrapeDuration": 0.003460832,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "kdc2.fis.epn.ec:88",
+          "__metrics_path__": "/probe",
+          "__param_module": "tcp_connect",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-kdc"
+        },
+        "labels": {
+          "instance": "kdc2.fis.epn.ec:88",
+          "job": "blackbox-kdc"
+        },
+        "scrapePool": "blackbox-kdc",
+        "scrapeUrl": "http://127.0.0.1:9115/probe?module=tcp_connect&target=kdc2.fis.epn.ec%3A88",
+        "globalUrl": "http://edge.fis.epn.ec:9115/probe?module=tcp_connect&target=kdc2.fis.epn.ec%3A88",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:03.750266646Z",
+        "lastScrapeDuration": 0.002879529,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "ldap.fis.epn.edu.ec:636",
+          "__metrics_path__": "/probe",
+          "__param_module": "ldaps_fis",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-ldaps"
+        },
+        "labels": {
+          "instance": "ldap.fis.epn.edu.ec:636",
+          "job": "blackbox-ldaps"
+        },
+        "scrapePool": "blackbox-ldaps",
+        "scrapeUrl": "http://127.0.0.1:9115/probe?module=ldaps_fis&target=ldap.fis.epn.edu.ec%3A636",
+        "globalUrl": "http://edge.fis.epn.ec:9115/probe?module=ldaps_fis&target=ldap.fis.epn.edu.ec%3A636",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:53.122383091Z",
+        "lastScrapeDuration": 0.010506228,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "ldap1.fis.epn.ec:636",
+          "__metrics_path__": "/probe",
+          "__param_module": "ldaps_fis",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-ldaps"
+        },
+        "labels": {
+          "instance": "ldap1.fis.epn.ec:636",
+          "job": "blackbox-ldaps"
+        },
+        "scrapePool": "blackbox-ldaps",
+        "scrapeUrl": "http://127.0.0.1:9115/probe?module=ldaps_fis&target=ldap1.fis.epn.ec%3A636",
+        "globalUrl": "http://edge.fis.epn.ec:9115/probe?module=ldaps_fis&target=ldap1.fis.epn.ec%3A636",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:56.448745909Z",
+        "lastScrapeDuration": 0.008896025,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "ldap2.fis.epn.ec:636",
+          "__metrics_path__": "/probe",
+          "__param_module": "ldaps_fis",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-ldaps"
+        },
+        "labels": {
+          "instance": "ldap2.fis.epn.ec:636",
+          "job": "blackbox-ldaps"
+        },
+        "scrapePool": "blackbox-ldaps",
+        "scrapeUrl": "http://127.0.0.1:9115/probe?module=ldaps_fis&target=ldap2.fis.epn.ec%3A636",
+        "globalUrl": "http://edge.fis.epn.ec:9115/probe?module=ldaps_fis&target=ldap2.fis.epn.ec%3A636",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:00.997989125Z",
+        "lastScrapeDuration": 0.01367211,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "https://web.fis.epn.ec/fis-idm",
+          "__metrics_path__": "/probe",
+          "__param_module": "https_kerberos_challenge",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blackbox-web"
+        },
+        "labels": {
+          "instance": "https://web.fis.epn.ec/fis-idm",
+          "job": "blackbox-web"
+        },
+        "scrapePool": "blackbox-web",
+        "scrapeUrl": "http://127.0.0.1:9115/probe?module=https_kerberos_challenge&target=https%3A%2F%2Fweb.fis.epn.ec%2Ffis-idm",
+        "globalUrl": "http://edge.fis.epn.ec:9115/probe?module=https_kerberos_challenge&target=https%3A%2F%2Fweb.fis.epn.ec%2Ffis-idm",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:04.73602058Z",
+        "lastScrapeDuration": 0.014954842,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "127.0.0.1:8404",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "haproxy"
+        },
+        "labels": {
+          "instance": "127.0.0.1:8404",
+          "job": "haproxy"
+        },
+        "scrapePool": "haproxy",
+        "scrapeUrl": "http://127.0.0.1:8404/metrics",
+        "globalUrl": "http://edge.fis.epn.ec:8404/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:53.845279478Z",
+        "lastScrapeDuration": 0.001218752,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "192.168.56.11:9100",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "host": "idm1",
+          "job": "node",
+          "role": "ldap-provider-kdc-primary"
+        },
+        "labels": {
+          "host": "idm1",
+          "instance": "192.168.56.11:9100",
+          "job": "node",
+          "role": "ldap-provider-kdc-primary"
+        },
+        "scrapePool": "node",
+        "scrapeUrl": "http://192.168.56.11:9100/metrics",
+        "globalUrl": "http://192.168.56.11:9100/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:59.283727029Z",
+        "lastScrapeDuration": 0.157139843,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "192.168.56.12:9100",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "host": "idm2",
+          "job": "node",
+          "role": "ldap-consumer-kdc-secondary"
+        },
+        "labels": {
+          "host": "idm2",
+          "instance": "192.168.56.12:9100",
+          "job": "node",
+          "role": "ldap-consumer-kdc-secondary"
+        },
+        "scrapePool": "node",
+        "scrapeUrl": "http://192.168.56.12:9100/metrics",
+        "globalUrl": "http://192.168.56.12:9100/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:53.629812358Z",
+        "lastScrapeDuration": 0.158779461,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "127.0.0.1:9100",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "host": "edge",
+          "job": "node",
+          "role": "proxy-web-monitoring"
+        },
+        "labels": {
+          "host": "edge",
+          "instance": "127.0.0.1:9100",
+          "job": "node",
+          "role": "proxy-web-monitoring"
+        },
+        "scrapePool": "node",
+        "scrapeUrl": "http://127.0.0.1:9100/metrics",
+        "globalUrl": "http://edge.fis.epn.ec:9100/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:03.402557924Z",
+        "lastScrapeDuration": 0.154577746,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "192.168.56.30:9100",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "host": "client",
+          "job": "node",
+          "role": "workstation"
+        },
+        "labels": {
+          "host": "client",
+          "instance": "192.168.56.30:9100",
+          "job": "node",
+          "role": "workstation"
+        },
+        "scrapePool": "node",
+        "scrapeUrl": "http://192.168.56.30:9100/metrics",
+        "globalUrl": "http://192.168.56.30:9100/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:25:59.208342571Z",
+        "lastScrapeDuration": 0.174869068,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "127.0.0.1:9090",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "prometheus"
+        },
+        "labels": {
+          "instance": "127.0.0.1:9090",
+          "job": "prometheus"
+        },
+        "scrapePool": "prometheus",
+        "scrapeUrl": "http://127.0.0.1:9090/metrics",
+        "globalUrl": "http://edge.fis.epn.ec:9090/metrics",
+        "lastError": "",
+        "lastScrape": "2026-07-17T04:26:02.357515553Z",
+        "lastScrapeDuration": 0.007154149,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      }
+    ],
+    "droppedTargets": []
+  }
+}
