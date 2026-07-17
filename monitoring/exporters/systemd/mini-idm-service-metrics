@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+umask 022
+
+HOST="$(hostname -s)"
+OUT='/var/lib/prometheus/node-exporter/mini_idm_services.prom'
+TMP="$(mktemp "${OUT}.XXXXXX")"
+
+case "$HOST" in
+    idm1)
+        SERVICES=(
+            prometheus-node-exporter
+            slapd
+            krb5-kdc
+            krb5-admin-server
+            mini-idm-kerberos-propagate.timer
+        )
+        ;;
+
+    idm2)
+        SERVICES=(
+            prometheus-node-exporter
+            slapd
+            krb5-kdc
+            krb5-kpropd
+        )
+        ;;
+
+    edge)
+        SERVICES=(
+            prometheus-node-exporter
+            haproxy
+            apache2
+            prometheus
+            prometheus-alertmanager
+            prometheus-blackbox-exporter
+            prometheus-apache-exporter
+            grafana-server
+        )
+        ;;
+
+    client)
+        SERVICES=(
+            prometheus-node-exporter
+        )
+        ;;
+
+    *)
+        SERVICES=(
+            prometheus-node-exporter
+        )
+        ;;
+esac
+
+{
+    echo '# HELP mini_idm_systemd_service_active Estado activo del servicio systemd.'
+    echo '# TYPE mini_idm_systemd_service_active gauge'
+
+    for SERVICE in "${SERVICES[@]}"; do
+        if systemctl is-active --quiet "$SERVICE"; then
+            VALUE=1
+        else
+            VALUE=0
+        fi
+
+        printf \
+          'mini_idm_systemd_service_active{host="%s",service="%s"} %d\n' \
+          "$HOST" \
+          "$SERVICE" \
+          "$VALUE"
+    done
+
+    echo '# HELP mini_idm_metrics_generated_timestamp_seconds Momento de generación de las métricas.'
+    echo '# TYPE mini_idm_metrics_generated_timestamp_seconds gauge'
+
+    printf \
+      'mini_idm_metrics_generated_timestamp_seconds{host="%s"} %s\n' \
+      "$HOST" \
+      "$(date +%s)"
+} > "$TMP"
+
+chmod 644 "$TMP"
+mv "$TMP" "$OUT"

@@ -1,0 +1,31 @@
+modules:
+  tcp_connect:
+    prober: tcp
+    timeout: 4s
+    tcp:
+      preferred_ip_protocol: ip4
+
+  ldaps_fis:
+    prober: tcp
+    timeout: 5s
+    tcp:
+      preferred_ip_protocol: ip4
+      tls: true
+      tls_config:
+        ca_file: /etc/ssl/certs/ca-certificates.crt
+        server_name: ldap.fis.epn.edu.ec
+        insecure_skip_verify: false
+
+  https_kerberos_challenge:
+    prober: http
+    timeout: 5s
+    http:
+      method: GET
+      preferred_ip_protocol: ip4
+      valid_status_codes:
+        - 401
+      no_follow_redirects: true
+      tls_config:
+        ca_file: /etc/ssl/certs/ca-certificates.crt
+        server_name: web.fis.epn.ec
+        insecure_skip_verify: false

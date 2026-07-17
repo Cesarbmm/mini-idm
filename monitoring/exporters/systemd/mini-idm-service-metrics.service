@@ -1,0 +1,9 @@
+[Unit]
+Description=Generar métricas de servicios Mini IdM
+After=local-fs.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+ExecStart=/usr/local/sbin/mini-idm-service-metrics

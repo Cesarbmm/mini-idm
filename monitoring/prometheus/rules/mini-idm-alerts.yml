@@ -1,0 +1,137 @@
+groups:
+  - name: mini-idm-availability
+    rules:
+      - alert: PrometheusTargetDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Prometheus no puede recolectar {{ $labels.instance }}"
+          description: "El target {{ $labels.instance }} del job {{ $labels.job }} permanece caído."
+
+      - alert: MiniIdmServiceInactive
+        expr: mini_idm_systemd_service_active == 0
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Servicio inactivo en {{ $labels.host }}"
+          description: "{{ $labels.service }} está inactivo en {{ $labels.host }}."
+
+      - alert: LDAPEndpointUnavailable
+        expr: probe_success{job="blackbox-ldaps"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Endpoint LDAP no disponible"
+          description: "No responde {{ $labels.instance }}."
+
+      - alert: LDAPPrimaryDownFailoverActive
+        expr: |
+          (probe_success{
+            job="blackbox-ldaps",
+            instance="ldap1.fis.epn.ec:636"
+          } == 0)
+          and on()
+          (probe_success{
+            job="blackbox-ldaps",
+            instance="ldap.fis.epn.edu.ec:636"
+          } == 1)
+        for: 20s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Failover LDAP activo"
+          description: "ldap1 está caído, pero el alias HA continúa disponible mediante ldap2."
+
+      - alert: KDCEndpointUnavailable
+        expr: probe_success{job="blackbox-kdc"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "KDC no disponible"
+          description: "No responde {{ $labels.instance }}."
+
+      - alert: KDCPrimaryDownFailoverAvailable
+        expr: |
+          (probe_success{
+            job="blackbox-kdc",
+            instance="kdc1.fis.epn.ec:88"
+          } == 0)
+          and on()
+          (probe_success{
+            job="blackbox-kdc",
+            instance="kdc2.fis.epn.ec:88"
+          } == 1)
+        for: 20s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Failover Kerberos disponible"
+          description: "kdc1 está caído, pero kdc2 continúa atendiendo."
+
+      - alert: KerberosPortalUnavailable
+        expr: probe_success{job="blackbox-web"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Portal Kerberos no disponible"
+          description: "El portal HTTPS/SPNEGO no devuelve el desafío Kerberos esperado."
+
+  - name: mini-idm-resources
+    rules:
+      - alert: NodeHighCPU
+        expr: |
+          100 -
+          (
+            avg by(instance) (
+              rate(node_cpu_seconds_total{mode="idle"}[5m])
+            ) * 100
+          ) > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CPU elevada"
+          description: "{{ $labels.instance }} supera 85% de CPU."
+
+      - alert: NodeHighMemory
+        expr: |
+          (
+            1 -
+            (
+              node_memory_MemAvailable_bytes
+              /
+              node_memory_MemTotal_bytes
+            )
+          ) * 100 > 90
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Memoria elevada"
+          description: "{{ $labels.instance }} supera 90% de RAM."
+
+      - alert: NodeLowRootDisk
+        expr: |
+          (
+            node_filesystem_avail_bytes{
+              mountpoint="/",
+              fstype!=""
+            }
+            /
+            node_filesystem_size_bytes{
+              mountpoint="/",
+              fstype!=""
+            }
+          ) < 0.15
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Poco espacio en disco"
+          description: "{{ $labels.instance }} tiene menos de 15% libre en /."

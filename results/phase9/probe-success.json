@@ -1,0 +1,74 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "__name__": "probe_success",
+          "instance": "https://web.fis.epn.ec/fis-idm",
+          "job": "blackbox-web"
+        },
+        "value": [
+          1784259790.013,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "probe_success",
+          "instance": "kdc1.fis.epn.ec:88",
+          "job": "blackbox-kdc"
+        },
+        "value": [
+          1784259790.013,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "probe_success",
+          "instance": "kdc2.fis.epn.ec:88",
+          "job": "blackbox-kdc"
+        },
+        "value": [
+          1784259790.013,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "probe_success",
+          "instance": "ldap.fis.epn.edu.ec:636",
+          "job": "blackbox-ldaps"
+        },
+        "value": [
+          1784259790.013,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "probe_success",
+          "instance": "ldap1.fis.epn.ec:636",
+          "job": "blackbox-ldaps"
+        },
+        "value": [
+          1784259790.013,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "probe_success",
+          "instance": "ldap2.fis.epn.ec:636",
+          "job": "blackbox-ldaps"
+        },
+        "value": [
+          1784259790.013,
+          "1"
+        ]
+      }
+    ]
+  }
+}

@@ -44,3 +44,15 @@ web/**/web-reader.json
 web/**/web-reader.password
 web/**/*.key
 http-web.keytab
+
+# Prometheus y Grafana: datos operativos
+monitoring/**/grafana.db
+monitoring/**/data/
+prometheus-data/
+grafana-data/
+*.tsdb
+*.wal
+
+# Credenciales de Grafana
+grafana-admin-password*
+monitoring/**/secrets/

@@ -1,0 +1,11 @@
+[Unit]
+Description=Actualizar métricas Mini IdM periódicamente
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=15s
+AccuracySec=1s
+Unit=mini-idm-service-metrics.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,8 @@
+[server]
+http_addr = 192.168.56.20
+http_port = 3000
+domain = monitor.fis.epn.ec
+root_url = http://monitor.fis.epn.ec:3000/
+
+[users]
+allow_sign_up = false
